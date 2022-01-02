@@ -1,20 +1,21 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 
 public class Exception1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         double firstNumber, secondNumber;
-        double result;
+        double result = 0;
         Scanner input = new Scanner(System.in);
+
         System.out.println("Please,Input first number: ");
         firstNumber = input.nextDouble();
         System.out.println("Please,Input second number: ");
         secondNumber = input.nextDouble();
-        result = firstNumber / secondNumber;
-        try {
+        try{
             result = firstNumber / secondNumber;
 
-        } catch (ArithmeticException e) {
+        }catch ( ArithmeticException e) {
             System.out.println("The division of two double numbers is:" + e);
         }
         System.out.println("The division of two double numbers is:" + result);
